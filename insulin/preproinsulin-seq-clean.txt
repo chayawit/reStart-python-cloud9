@@ -2,3 +2,8 @@ malwmrllpllallalwgpdpaaa
 fvnqhlcgshlvealylvcgergffytpkt
 rreaedlqvgqvelgggpgagslqplalegslqkr
 giveqcctsicslyqlenycn
+
+This has been done manually but the bash command below can also be used instead.
+echo $(tr -d '\n' < preproinsulin-seq.txt | sed 's/[^[:lower:]]//g')
+First, use `tr` to trim new lines. Then, use `sed` to remove everything except 
+lowercase alphabets. Sed is line-based so it's hard to work with newlines.
