@@ -11,7 +11,7 @@ insulin = bInsulin + aInsulin
 
 pKR = {'y':10.07,'c': 8.18,'k':10.53,'h':6.00,'r':12.48,'d':3.65,'e':4.25}
 
-seqCount = ({x: float(insulin.count(x)) for x in ['y','c','k','h','r','d','e']})
+seqCount = {x: insulin.count(x) for x in ['y','c','k','h','r','d','e']}
 
 pH = 0
 while (pH <= 14):
@@ -22,4 +22,3 @@ while (pH <= 14):
     for x in ['y','c','d','e']}.values())))
     print('{0:.2f}'.format(pH), netCharge)
     pH += 1
-
